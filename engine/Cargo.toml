@@ -1,0 +1,16 @@
+[package]
+name = "merchant-engine"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+turso_core = { path = "../.build/turso/core", default-features = false }
+
+[profile.dev]
+opt-level = 1
+debug = 0
+incremental = false
